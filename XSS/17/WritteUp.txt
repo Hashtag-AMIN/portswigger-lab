@@ -1,0 +1,4 @@
+
+
+
+https://0a2e0026049a435181e1669e002100a6.web-security-academy.net/?%27accesskey=%27x%27onclick=%27alert(1)

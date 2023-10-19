@@ -1,0 +1,4 @@
+
+Testing for CORS misconfigurations:
+1. change the origin to an arbitrary value / True
+2.

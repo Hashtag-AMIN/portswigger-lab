@@ -1,0 +1,6 @@
+
+in stockApi parameter :
+
+localhost - http://localhost/
+admin interface - http://localhost/admin
+delete carlos - http://localhost/admin/delete?username=carlos

