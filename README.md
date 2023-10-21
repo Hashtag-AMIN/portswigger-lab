@@ -15,12 +15,12 @@
 
 - 💻 &nbsp; Server Side:
     - SQLi
-    - Athentication
+    - Broken Authentication
     - Path Traversal
     - Command Injection
     - Business Logic Vulnerabilities
     - Information Disclosrue
-    - Access Control
+    - Broken Access Control
     - File Upload Vulnerabilities
     - Race Condition
     - SSRF
@@ -38,8 +38,10 @@
 
 <br>
 
-<h3>Add WiteUps of Advanced topics Labs Soon !! </h3>
+<h3>Order of all Labs solution is in portswigger.net/web-security/all-labs --> <a>https://portswigger.net/web-security/all-labs</a></h3>
 
 <br>
+
+<h4>Add WiteUps of Advanced topics Labs Soon !! </h4>
 
 &nbsp;&nbsp;&nbsp;Happy Learning ;) &nbsp;🤝 🌱 
