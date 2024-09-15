@@ -1,0 +1,10 @@
+
+The price has exceeded the maximum value permitted for an integer in the back-end programming language (2,147,483,647). As a result, the value has looped back around to the minimum possible value (-2,147,483,648)
+
+
+so we need :
+ 	
+	"l33t" Leather Jacket	32123
+	Cheshire Cat Grin 	 	13
+	
+we can pay $36.70 and buy all of these :)

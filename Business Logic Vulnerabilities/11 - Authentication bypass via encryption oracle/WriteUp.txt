@@ -1,0 +1,21 @@
+
+
+We have encryoted value when use stay login and can't broke or decrypt that
+
+but we have encryption and decryption function in app in this ulrs:
+
+https://0a0f00b50370e47781482f9d008e0075.web-security-academy.net/post?postId=10
+
+-->	send a value in email value to use encrypted value
+ 
+ 
+https://0a0f00b50370e47781482f9d008e0075.web-security-academy.net/post/comment
+
+--> send a value in notification header to decrypt
+
+
+wiener:1697620723687
+administrator:1697620723687
+xxxxxxxxxadministrator:1697620723687
+
+after these crop 16 byte of ecrypted cypher text and set in your cookie feild of stay-login :)

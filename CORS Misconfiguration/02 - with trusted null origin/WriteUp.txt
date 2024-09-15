@@ -1,0 +1,4 @@
+
+Testing for CORS misconfigurations:
+1. Change the origin header to an arbitrary value
+2. Change the origin header to the null value

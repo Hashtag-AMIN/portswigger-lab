@@ -1,0 +1,7 @@
+
+Steps to exploit:
+
+1. Log into the wiener account
+2. Exploit access control vulnerability to obtain the administrator's password
+3. Login as the administrator user
+4. Delete the carlos user

